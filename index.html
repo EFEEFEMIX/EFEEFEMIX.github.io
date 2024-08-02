@@ -3,29 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bill Cipher Fotoğrafı</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        img {
-            width: 300px;
-            height: auto;
-        }
-        .date {
-            margin-top: 20px;
-            font-size: 18px;
-        }
-    </style>
+    <title>Gizemli Web Sayfası</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <img src="bill_cipher.jpg" alt="Bill Cipher">
-        <div class="date">1 Aralık 2005</div>
+        <h1>Gizemli Web Sayfası</h1>
+        <p>Bu sayfa gizemli ve karanlık bir hava yaratmak için tasarlandı.</p>
+        <button onclick="showSecret()">Sırları Açığa Çıkar</button>
+        <div id="secret" class="hidden">
+            <p>Bu, gizemli bir sırdır!</p>
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
