@@ -1,2 +1,17 @@
-git clone https://github.com/kullaniciadi/geri-sayim.git
-cd geri-sayim
+import time
+
+def geri_sayim(saniye):
+    while saniye:
+        gunler = saniye // (24 * 3600)
+        saatler = (saniye % (24 * 3600)) // 3600
+        dakikalar = (saniye % 3600) // 60
+        saniyeler = saniye % 60
+        zaman_format = '{:02d} Gün {:02d} Saat {:02d} Dakika {:02d} Saniye'.format(gunler, saatler, dakikalar, saniyeler)
+        print(zaman_format, end='\r')
+        time.sleep(1)
+        saniye -= 1
+
+    print("Borulara bak!")
+
+# Geri sayımı başlatmak için süreyi (3 gün = 3 * 24 * 3600 saniye) belirtin
+geri_sayim(3 * 24 * 3600)
